@@ -55,4 +55,4 @@ npm run dev
 ---
 
 ## 👥 Authors & Acknowledgments
-Developed for the **GenAI Hackathon 2026** to empower Pakistani citizens and modernize urban municipal services.
+Developed for the **SMIT Coding Night Hackathon 2026** to empower Pakistani citizens and modernize urban municipal services.
