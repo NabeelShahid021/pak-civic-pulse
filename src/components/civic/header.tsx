@@ -47,11 +47,11 @@ export function Header() {
         <Link to="/" className="flex min-w-0 items-center gap-2.5">
           <CivicLogo className="h-9 w-9 shrink-0" />
           <span className="min-w-0">
-            <span className="block truncate text-sm leading-tight font-extrabold tracking-tight sm:text-base">
-              AI Smart Civic Services
+            <span className="block truncate text-sm leading-tight font-extrabold tracking-tight sm:text-base text-foreground">
+              Pak Civic Pulse
             </span>
-            <span className="hidden text-[11px] text-muted-foreground sm:block">
-              اسمارٹ بلدیاتی خدمات
+            <span className="hidden text-[11px] text-muted-foreground sm:block font-urdu">
+              پاک سِوک پلس
             </span>
           </span>
         </Link>

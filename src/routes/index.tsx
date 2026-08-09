@@ -9,6 +9,7 @@ import {
   LocateFixed,
   MapPin,
   Phone,
+  Play,
   Send,
   Sparkles,
   Upload,
@@ -26,14 +27,23 @@ import { useAuthDialog } from "@/components/civic/auth-dialog";
 import { CategoryBadge, PriorityBadge } from "@/components/civic/badges";
 import { ProgressTimeline } from "@/components/civic/complaint-detail";
 
+// YouTube Demo Video ID
+const DEMO_VIDEO_ID = "_HYrqOAjG74";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Report a Civic Issue — AI Smart Civic Services" },
+      { title: "Pak Civic Pulse — AI Civic Complaint Reporting" },
       {
         name: "description",
         content:
-          "Report civic complaints in English, Urdu or Roman Urdu with automated AI triage and municipal dispatch across Pakistani cities.",
+          "Pak Civic Pulse: Report civic complaints in English, Urdu or Roman Urdu with automated AI triage and municipal dispatch across Pakistani cities.",
+      },
+      { property: "og:title", content: "Pak Civic Pulse — AI Civic Complaint Reporting" },
+      {
+        property: "og:description",
+        content:
+          "Fast AI-powered civic complaint triage for Pakistani cities across WASA, TEPA, LESCO, and Waste Management.",
       },
     ],
   }),
@@ -193,17 +203,45 @@ function SubmitPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 space-y-8">
-      {/* Header Banner */}
-      <section className="text-center space-y-2">
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-          <Sparkles className="h-3.5 w-3.5" /> AI Smart Civic Services
-        </span>
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
-          Report City Problems. <span className="text-gradient">Fast AI Triage.</span>
-        </h1>
-        <p className="mx-auto max-w-xl text-xs sm:text-sm text-muted-foreground">
-          Submit complaints in English, اردو, or Roman Urdu. AI automatically detects urgency, flags duplicate clusters, and dispatches to WASA, TEPA, or LESCO.
-        </p>
+      {/* 2-Column Hero Section with Video Embed Slot */}
+      <section className="grid items-center gap-6 lg:grid-cols-12 lg:gap-8">
+        {/* Left Column: Brand Hero Text */}
+        <div className="space-y-3 text-left lg:col-span-6">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">
+            <Sparkles className="h-3.5 w-3.5" /> Pak Civic Pulse
+          </div>
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl text-foreground">
+            Report City Problems. <span className="text-gradient">Fast AI Triage.</span>
+          </h1>
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-lg">
+            Submit municipal complaints in English, اردو, or Roman Urdu. AI automatically classifies urgency, clusters duplicates, and dispatches to WASA, TEPA, or LESCO.
+          </p>
+        </div>
+
+        {/* Right Column: Responsive Video Embed Slot */}
+        <div className="lg:col-span-6">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border/80 bg-card shadow-md">
+            {DEMO_VIDEO_ID && DEMO_VIDEO_ID !== "REPLACE_WITH_YOUTUBE_ID" ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${DEMO_VIDEO_ID}?rel=0&modestbranding=1`}
+                title="Pak Civic Pulse Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full border-0"
+              />
+            ) : (
+              <div className="flex h-full w-full flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-secondary/40 via-card to-background">
+                <div className="mb-2 grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary shadow-inner">
+                  <Play className="h-6 w-6 fill-current translate-x-0.5" />
+                </div>
+                <p className="text-xs sm:text-sm font-bold text-foreground">Platform Demo Video</p>
+                <p className="mt-1 text-[11px] sm:text-xs text-muted-foreground max-w-xs">
+                  Watch how citizen complaints are triaged, clustered, and resolved in real-time.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
       </section>
 
       {/* Visual Problem Cards with Guaranteed Local & CDN Images */}

@@ -11,13 +11,13 @@ import { ComplaintDetailDialog } from "@/components/civic/complaint-detail";
 export const Route = createFileRoute("/my-complaints")({
   head: () => ({
     meta: [
-      { title: "My Complaints — AI Smart Civic Services" },
+      { title: "My Complaints — Pak Civic Pulse" },
       {
         name: "description",
         content:
-          "Your citizen dashboard: every complaint you filed with AI category, priority, status and resolution timeline.",
+          "Your Pak Civic Pulse citizen dashboard: every complaint you filed with AI category, priority, status and resolution timeline.",
       },
-      { property: "og:title", content: "My Complaints — AI Smart Civic Services" },
+      { property: "og:title", content: "My Complaints — Pak Civic Pulse" },
       {
         property: "og:description",
         content: "Track every civic complaint you filed, with live status and AI reasoning.",

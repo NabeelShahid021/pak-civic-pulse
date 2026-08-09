@@ -18,13 +18,13 @@ export const Route = createFileRoute("/track")({
   }),
   head: () => ({
     meta: [
-      { title: "Public Complaint Tracker — AI Smart Civic Services" },
+      { title: "Public Complaint Tracker — Pak Civic Pulse" },
       {
         name: "description",
         content:
-          "Track any municipal complaint publicly by complaint ID or phone number — no account required.",
+          "Track any municipal complaint publicly by complaint ID or phone number on Pak Civic Pulse — no account required.",
       },
-      { property: "og:title", content: "Public Complaint Tracker — AI Smart Civic Services" },
+      { property: "og:title", content: "Public Complaint Tracker — Pak Civic Pulse" },
       {
         property: "og:description",
         content: "Follow a civic complaint from submission to resolution, no login needed.",

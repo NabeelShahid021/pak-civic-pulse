@@ -29,12 +29,12 @@ import { AdminPageHeader } from "@/components/civic/admin-shell";
 export const Route = createFileRoute("/admin/")({
   head: () => ({
     meta: [
-      { title: "Admin Overview — AI Smart Civic Services" },
+      { title: "Admin Overview — Pak Civic Pulse" },
       {
         name: "description",
         content: "Live KPIs, category and priority analytics for municipal complaint triage.",
       },
-      { property: "og:title", content: "Admin Overview — AI Smart Civic Services" },
+      { property: "og:title", content: "Admin Overview — Pak Civic Pulse" },
       { property: "og:description", content: "Live civic analytics for municipal operators." },
       { name: "robots", content: "noindex" },
     ],

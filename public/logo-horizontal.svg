@@ -1,0 +1,6 @@
+<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="140" height="140" rx="30" fill="#0F9B8E"/>
+  <path d="M70 28 C49 28 32 45 32 66 C32 91 70 118 70 118 C70 118 108 91 108 66 C108 45 91 28 70 28 Z" fill="#FFFFFF"/>
+  <polyline points="42,66 58,66 65,52 74,80 81,66 98,66" stroke="#0F9B8E" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="160" y="82" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#0F172A">Pak Civic Pulse</text>
+</svg>

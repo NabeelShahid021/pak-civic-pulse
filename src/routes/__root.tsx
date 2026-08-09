@@ -82,15 +82,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AI Smart Civic Services — Municipal Complaint Triage" },
+      { title: "Pak Civic Pulse — AI Civic Complaint Reporting" },
       {
         name: "description",
         content:
-          "AI-powered civic complaint triage for Pakistani cities: file, track and resolve municipal issues in English, Urdu and Roman Urdu.",
+          "Pak Civic Pulse: AI-powered civic complaint triage for Pakistani cities. File, track and resolve municipal issues in English, Urdu and Roman Urdu.",
       },
-      { name: "author", content: "AI Smart Civic Services" },
+      { name: "author", content: "Pak Civic Pulse" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Pak Civic Pulse — AI Civic Complaint Reporting" },
+      {
+        property: "og:description",
+        content:
+          "Fast AI-powered civic complaint triage for Pakistani cities across WASA, TEPA, LESCO, and Waste Management.",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Pak Civic Pulse — AI Civic Complaint Reporting" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -100,7 +107,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/svg+xml", href: "/logo-icon.svg" },
+      { rel: "shortcut icon", type: "image/svg+xml", href: "/logo-icon.svg" },
     ],
   }),
   shellComponent: RootShell,
@@ -144,23 +152,17 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthDialogProvider>
-        <div className="flex min-h-screen flex-col bg-background">
+        <div className="flex min-h-screen flex-col bg-background text-foreground">
           <Header />
           <main className="flex-1">
             <Outlet />
           </main>
           <footer className="border-t border-border/60 py-6 text-center text-xs text-muted-foreground">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
-              <span>AI Smart Civic Services · Municipal triage powered by multilingual AI · اسمارٹ بلدیاتی خدمات</span>
-              <span className="hidden sm:inline">·</span>
-              <Link to="/admin" className="text-muted-foreground/60 hover:text-foreground hover:underline transition-colors">
-                Municipal Admin Access
-              </Link>
-            </div>
+            <p>Pak Civic Pulse · AI-Powered Municipal Issue Resolution for Pakistani Cities</p>
           </footer>
           <ChatAssistant />
+          <Toaster richColors position="top-center" />
         </div>
-        <Toaster richColors position="top-center" />
       </AuthDialogProvider>
     </QueryClientProvider>
   );
